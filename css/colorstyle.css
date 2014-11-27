@@ -1,0 +1,124 @@
+body {
+  background-color: lightgrey;
+}
+
+path {
+  stroke: #000;
+  stroke-width: 1.5;
+  cursor: pointer;
+}
+
+text {
+  font: 11px sans-serif;
+  cursor: pointer;
+}
+
+body {
+  width: 880px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin: .5em 0;
+}
+
+h2.subtitle
+{
+  text-align: center;
+}
+
+p#intro {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.paint_chip
+{
+  display: inline-block;
+}
+
+figcaption {
+  text-align: center;
+}
+
+#chromium_oxide_t
+{
+  background-color: rgb(74, 104, 73);
+}
+
+#chromium_oxide_50p
+{
+  background-color: #94d192;
+}
+
+#raw_umber_t{
+
+  background-color: #524837;
+}
+
+#raw_umber_50p{
+
+  background-color: rgb(164, 144, 110)
+}
+
+#yellow_m {
+  background-color: rgb(255, 255, 00)
+
+}
+.hex_chip
+{
+width: 100px;
+height: 100px;
+background-image: "../images/blank_chip.png";
+display: inline-block;
+/*background-color: blue;*/
+margin-right: 4px;
+text-align: center;
+
+}
+
+.spectral
+{
+  float: right;
+  margin-right: 400px;
+}
+
+.chip_pure_50
+{
+
+  margin-bottom: 50px;
+}
+
+.chip_value_range
+{
+  margin-bottom: 20px;
+}
+
+#intro 
+{
+  font-family: Arial;
+  border: 1px solid black;
+}
+
+#welcomeBox {
+  margin: auto;
+  border: 1px solid black;
+  text-align: center;
+  margin-top: 5%;
+  border-radius: 40px;
+}
+
+div.tooltip {   
+  position: absolute;           
+  text-align: center;           
+  width: 60px;                  
+  height: 28px;                 
+  padding: 2px;             
+  font: 12px sans-serif;        
+  background: lightsteelblue;   
+  border: 0px;      
+  border-radius: 8px;           
+  pointer-events: none;         
+}
+

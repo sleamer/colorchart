@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Specific Pigments">
+        <title>Munsell Yellow</title>
+        <link rel="stylesheet" type="text/css" href="css/colorstyle.css">
+        <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+		</script>
+    </head>
+    <body>
+    	<h1>SPECTRAL YELLOW - Y</h1>
+    	<h2 class="subtitle">on the Munsell Scale</h2>
+    	<h3><a href="index.html">Color Wheel</a></h3>
+
+    		<div class="rgb_pure_50">
+	    		<div class="paint_chip">
+	    			<img src="images/blank_chip.png" id="yellow_m">
+	    			<figcaption>RGB<br>(255, 255, 00)<br>
+	    				Hex<br>#ffff00
+	    			</figcaption>
+	    		</div>
+    		</div>
+
+
+    	<div class="hex_value_range">
+
+    	</div>
+
+
+
+
+    	<div class="pigment_info">
+            <p>Yellow is a high valued color.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie, urna nec posuere ultricies, justo turpis elementum justo, ut ullamcorper dui felis quis tortor. Nunc ut risus eu erat interdum euismod. Sed at efficitur risus, non lobortis sapien. Nunc rutrum est purus, non finibus ipsum porta sed. Proin at accumsan purus. Curabitur interdum aliquet tortor id cursus. Aenean a porta arcu. Donec eget turpis libero. Aliquam vitae placerat nisl. Fusce tortor justo, sollicitudin id quam et, efficitur cursus magna. Nam vulputate orci arcu, et vehicula ipsum elementum in</p>
+
+<p>Vivamus nec ligula ac nulla fringilla vulputate. Phasellus vitae justo semper nulla mattis sollicitudin. Nulla sagittis et nisl et varius. Nunc in sollicitudin lacus, et congue tellus. Ut placerat dui id tellus tincidunt condimentum. Praesent placerat tempus leo, vel lobortis quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere turpis ac neque mollis vestibulum. Pellentesque blandit leo sed tellus condimentum, et varius ex aliquam. Sed eget diam ut ipsum efficitur maximus a sit amet eros. Nam volutpat faucibus tellus sed vehicula. In at sagittis nisl. Nulla congue et augue eget posuere. In enim nibh, malesuada sit amet erat quis, faucibus ullamcorper ligula. In eleifend lacus vitae dignissim volutpat.</p> 
+
+			<p><a href="index.html">Color Wheel</a></p>
+    	</div>
+    	
+
+    	<script>
+    	var scale = d3.scale.linear()
+                    .domain([2, 8])
+                    .range(["#222200", "#ffff00"]);
+
+    	var boxWidth = 100;
+    	var boxHeight = 100;
+    	var valueRange = [2, 3, 4, 5, 6, 7, 8];
+    		d3.select("div.hex_value_range").selectAll("div")
+    				.data(valueRange)
+    				.enter()
+    				.append("div")
+					.classed("hex_chip", true)
+					.style("background-color", function(d) {return scale(d); })
+					.text( function(d) {return scale(d)});
+
+
+
+    	</script>
+    </body>
+</html>

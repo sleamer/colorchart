@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Specific Pigments">
+        <title>Raw Umber</title>
+        <link rel="stylesheet" type="text/css" href="css/colorstyle.css">
+        <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+		</script>
+    </head>
+    <body>
+    	<h1>Raw Umber</h1>
+    	<h2 class="subtitle">Pigment Brown 7
+(77492 1 &amp; 9)</h2>
+    	<h3><a href="index.html">Color Wheel</a></h3>
+
+    		<div class="rgb_pure_50">
+	    		<div class="paint_chip">
+	    			<img src="images/blank_chip.png" id="raw_umber_t">
+	    			<figcaption>RGB<br>(82, 72, 55)<br>
+	    				Hex<br>#524837
+	    			</figcaption>
+	    		</div>
+
+	    		<div class="paint_chip">
+	    			<img src="images/blank_chip.png" id="raw_umber_50p">
+	    			<figcaption>Doubling all <br>
+	    				RGB values.<br>.<br>.</figcaption>
+	    		</div>
+	    		<div class="spectral">
+    				<img src="images/rawUmber_spectral.png" height="300" >
+    			</div>
+    		</div>
+
+    	<div class="chip_pure_50">
+    		<div class="paint_chip">
+    			<img src="images/raw_umber_gdA_t.jpg" height="100" width="100">
+    			<figcaption>Pure</figcaption>
+    		</div>
+    		<div class="paint_chip">
+    			<img src="images/raw_umber_gdA_50p.jpg" height="100" width="100">
+    			<figcaption>50% Titanium</figcaption>
+    		</div>
+    	</div>
+    	<div class="chip_value_range">
+    		<div class="paint_chip">
+    			<img src="images/raw_umber_gdA_v2.jpg" height="100" width="100">
+    			<figcaption>Paint V-2</figcaption>
+    		</div>
+    		<div class="paint_chip">
+    			<img src="images/raw_umber_gdA_v3.jpg" height="100" width="100">
+    			<figcaption>Paint V-3</figcaption>
+    		</div>
+    		<div class="paint_chip">
+    			<img src="images/raw_umber_gdA_v4.jpg" height="100" width="100">
+    			<figcaption>Paint V-4</figcaption>
+    		</div>
+    		<div class="paint_chip">
+    			<img src="images/raw_umber_gdA_v5.jpg" height="100" width="100">
+    			<figcaption>Paint V-5</figcaption>
+    		</div>
+    		<div class="paint_chip">
+    			<img src="images/raw_umber_gdA_v6.jpg" height="100" width="100">
+    			<figcaption>Paint V-6</figcaption>
+    		</div>
+    		<div class="paint_chip">
+    			<img src="images/raw_umber_gdA_v7.jpg" height="100" width="100">
+    			<figcaption>Paint V-7</figcaption>
+    		</div>
+    		<div class="paint_chip">
+    			<img src="images/raw_umber_gdA_v8.jpg" height="100" width="100">
+    			<figcaption>Paint V-8</figcaption>
+    		</div>
+    	</div>
+    	<div class="hex_value_range">
+
+    	</div>
+
+
+
+
+    	<div class="pigment_info">
+
+			
+			<h3>LIGHTFASTNESS</h3>
+			ASTM D4302 1
+			<h3>CHEMICAL TYPE/CLASS</h3>
+			Inorganic
+            Iron oxide
+			<h3>CHEMICAL FORMULA/DESCRIPTION</h3>
+			Fe2O3.xMnO2
+			Ferroso ferric oxide prepared from ores containing up
+            to 25 percent manganese dioxide and varying amounts
+            of alumina and silica
+			<h3>SOLID BULK DENSITY</h3>
+			23.3-37.51blUS gal
+			<h3>OIL ABSORPTION</h3>
+			23-35wtl100wt
+			<h3>OIL FILM CHARACTERISTICS</h3>
+			Fast drying
+            Hard. fairly flexible
+			<h3>VEHICLE COMPATIBILITY</h3>
+			Linseed oil, alkyd. acrylic, watercolor, gouache. tempera.
+            casein. encaustic. fresco, pastel
+			<h3>TOXICITY</h3>
+			Manganese is considered toxic: do not breathe dust
+			<h3>COMMON NAMES</h3>
+			<p>Raw umber, natural brown iron oxide
+            Raw umber. A native earth. its composition is similar to sienna but it contains manganese. A dark brown its tones vary from greenish or yellowish to violet-brown. Not entirely opaque. Good grades come from Italy. The best grade (Turkey umber) comes from Cyprus.</p>
+			<h3>CREDITS</h3>
+			<p>The Artist's Handbook of Materials and Techniques - Fifth Edition<br>
+				By Ralph Mayer</p>
+
+			<p><a href="index.html">Color Wheel</a></p>
+    	</div>
+    	
+
+    	<script>
+    	var scale = d3.scale.linear()
+                    .domain([2, 8])
+                    .range(["#170e0d", "#cfc8c1"]);
+
+    	var boxWidth = 100;
+    	var boxHeight = 100;
+    	var valueRange = [2, 3, 4, 5, 6, 7, 8];
+    		d3.select("div.hex_value_range").selectAll("div")
+    				.data(valueRange)
+    				.enter()
+    				.append("div")
+					.classed("hex_chip", true)
+					.style("background-color", function(d) {return scale(d); })
+					.text( function(d) {return scale(d)});
+
+
+
+    	</script>
+    </body>
+</html>
